@@ -19,20 +19,5 @@ for k in range (99):
 
 #data = [[1,1,1],[1,1,1]]
 
-for yla in data:
-    bpy.ops.object.duplicate_move(OBJECT_OT_duplicate={"linked":False, "mode":'TRANSLATION'}, 
-        TRANSFORM_OT_translate={"value":yla, 
-                                "constraint_axis":(False, False, False), 
-                                "mirror":False, 
-                                "proportional_edit_falloff":'SMOOTH', 
-                                "proportional_size":1, 
-                                "snap":False, 
-                                "snap_target":'CLOSEST', 
-                                "snap_point":(0, 0, 0), 
-                                "snap_align":False, 
-                                "snap_normal":(0, 0, 0), 
-                                "gpencil_strokes":False, 
-                                "texture_space":False, 
-                                "remove_on_cancel":False, 
-                                "release_confirm":False, 
-                                "use_accurate":False})
+for insta in data:
+    bpy.ops.mesh.primitive_cone_add(location=(insta[0],insta[1],insta[2]))
